@@ -1,11 +1,21 @@
 require 'test_helper'
 
 class TestsControllerTest < ActionController::TestCase
+  include Devise::Test::ControllerHelpers
   setup do
     @test = tests(:one)
+    @user = users(:one)
+    @request.headers['X-User-Email'] = @user.email
+    @request.headers['X-User-Token'] = @user.authentication_token
   end
 
-  test "should get index" do
+  test "should get index authenticated" do
+    get :index,  { user_email: @user.email, user_token: @user.authentication_token }
+    assert_response :success
+    assert_not_nil assigns(:tests)
+  end
+
+  test "should get index authenticate by headers" do
     get :index
     assert_response :success
     assert_not_nil assigns(:tests)

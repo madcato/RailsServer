@@ -94,6 +94,10 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    simple_token_authentication (1.14.0)
+      actionmailer (>= 3.2.6, < 6)
+      actionpack (>= 3.2.6, < 6)
+      devise (>= 3.2, < 6)
     spring (1.7.2)
     sprockets (2.12.4)
       hike (~> 1.2)
@@ -132,6 +136,7 @@ DEPENDENCIES
   rails (= 4.1.4)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
+  simple_token_authentication
   spring
   sqlite3
   turbolinks

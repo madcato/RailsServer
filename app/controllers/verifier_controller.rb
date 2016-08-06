@@ -11,12 +11,12 @@ class VerifierController < ApplicationController
       hash = Digest::SHA512.digest strToHash
       enc   = Base64.strict_encode64(hash)
       if enc == params[:hash] 
-        respond({result: :valid})
+        respond({r: :v})
       else
-        respond({result: :invalid})
+        respond({r: :i})
       end
     else 
-      respond({result: :invalid})
+      respond({r: :i})
     end
   end
   

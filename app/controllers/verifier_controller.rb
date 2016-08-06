@@ -2,8 +2,9 @@ require 'digest'
 require 'base64'
 
 class VerifierController < ApplicationController
+  before_action :test_params, only: :check
+  
   def check
-    test_params
     @user = User.find_by_id(params[:id])
     if @user
       strToHash = @user.email + @user.authentication_token + params[:rand]
@@ -28,8 +29,8 @@ class VerifierController < ApplicationController
       
 private
   def test_params
-    params.require(:hash)
-    params.require(:rand)
-    params.require(:id)
+    [:hash, :id, :rand].each{ |param|
+        render(json: {msg: "Parameter '#{param.to_s}' not found"}, status: :bad_request) if params[param].nil?        
+    }    
   end
 end

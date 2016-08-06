@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'verifier/check'
+
   resources :tests
 
   devise_for :users

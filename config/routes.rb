@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'verifier/check'
+  get 'verifier/sharedSecret'
 
   resources :tests
 

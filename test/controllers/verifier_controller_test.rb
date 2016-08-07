@@ -6,6 +6,7 @@ class VerifierControllerTest < ActionController::TestCase
     @user = users(:one)
     @request.headers['X-User-Email'] = @user.email
     @request.headers['X-User-Token'] = @user.authentication_token
+    @shared = shared_secrets(:one)
   end
   
   test "should post check" do
@@ -50,4 +51,33 @@ class VerifierControllerTest < ActionController::TestCase
     assert_equal response['msg'], "Parameter 'rand' not found"
   end  
   
+  test "should get shared secret" do
+    get :sharedSecret, {format: 'json', id: 2}
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal response['s'], @shared.secret
+  end
+  
+  test "should get a new shared secret" do
+    assert_difference('SharedSecret.count') do
+      get :sharedSecret, {format: 'json', id: 3}
+    end
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_not_nil response['s']
+  end
+  
+  test "should get shared secret fail id" do
+    get :sharedSecret
+    assert_response :bad_request
+    response = JSON.parse(@response.body)
+    assert_equal response['msg'], "Parameter 'id' not found"
+  end
+  
+  test "should get shared secret fail user not found" do
+    get :sharedSecret, {format: 'json', id: 5}
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal response['r'], 'i'
+  end
 end

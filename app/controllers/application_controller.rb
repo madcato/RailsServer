@@ -10,4 +10,12 @@ class ApplicationController < ActionController::Base
   #     -c cookie
   respond_to :html, :json 
   acts_as_token_authentication_handler_for User
+  
+private
+  def respond(result)
+    respond_to do |format|
+      format.html { render result }
+      format.json { render json: result }
+    end
+  end  
 end

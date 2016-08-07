@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160730093506) do
+ActiveRecord::Schema.define(version: 20160807164450) do
+
+  create_table "shared_secrets", force: true do |t|
+    t.integer  "id1"
+    t.integer  "id2"
+    t.string   "secret"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "shared_secrets", ["id1", "id2"], name: "index_shared_secrets_on_id1_and_id2", unique: true
 
   create_table "tests", force: true do |t|
     t.string   "name"

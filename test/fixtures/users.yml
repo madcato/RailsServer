@@ -10,7 +10,10 @@ one: {
   created_at: "2016-07-30 09:05:57", 
   updated_at: "2016-07-30 09:36:20", 
   authentication_token: "xfFPxoZWrrdZXd6_4r5V",
-  confirmed_at: "2015/01/01"
+  confirmed_at: "2015/01/01",
+  userType: 0,
+  name: "dani1",
+  photo: "BAEB23675BSssb75b1"
   }
 # column: value
 #
@@ -20,7 +23,10 @@ two: {
   created_at: "2016-07-31 09:05:57", 
   updated_at: "2016-07-31 09:36:20", 
   authentication_token: "xfFPxoZWrrdZXd6_4r5A",
-  confirmed_at: "2015/01/02"
+  confirmed_at: "2015/01/02",
+  userType: 0,
+  name: "dani2",
+  photo: "BAEB23675BSssb75b2"
   }
 #  column: value
 #
@@ -30,6 +36,43 @@ three: {
   created_at: "2016-07-31 09:05:57", 
   updated_at: "2016-07-31 09:36:20", 
   authentication_token: "xfFPxoZWrrdZXd6_4r5B",
-  confirmed_at: "2015/01/03"
+  confirmed_at: "2015/01/03",
+  userType: 1,
+  name: "dani3",
+  photo: "BAEB23675BSssb75b3"
   }
 #  column: value
+#
+four: {
+  id: 4, 
+  email: "daniel2@veladan.org", 
+  created_at: "2016-07-31 09:05:57", 
+  updated_at: "2016-07-31 09:36:20", 
+  authentication_token: "xfFPxoZWrrdZXd6_4r51",
+  confirmed_at: "2015/01/03",
+  userType: 1,
+  name: "dani4",
+  photo: "BAEB23675BSssb75b4"
+  }
+#  column: value
+#
+five: {
+  id: 5, 
+  email: "daniel4@veladan.org", 
+  created_at: "2016-07-31 09:05:57", 
+  updated_at: "2016-07-31 09:36:20", 
+  authentication_token: "xfFPxoZWrraZXd6_4r51",
+  confirmed_at: "2015/01/03",
+  userType: 0
+  }
+#  column: value
+#
+six: {
+  id: 6, 
+  email: "daniel5@veladan.org", 
+  created_at: "2016-07-31 09:05:57", 
+  updated_at: "2016-07-31 09:36:20", 
+  authentication_token: "xfFPxoZWrrqZXd6_4r51",
+  confirmed_at: "2015/01/03",
+  userType: 1
+  }

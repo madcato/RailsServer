@@ -75,7 +75,7 @@ class VerifierControllerTest < ActionController::TestCase
   end
   
   test "should get shared secret fail user not found" do
-    get :sharedSecret, {format: 'json', id: 5}
+    get :sharedSecret, {format: 'json', id: 555}
     assert_response :success
     response = JSON.parse(@response.body)
     assert_equal response['r'], 'i'

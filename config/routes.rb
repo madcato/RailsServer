@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'resource/userData'
+
+  get 'resource/merchantData'
+
   get 'verifier/check'
   get 'verifier/sharedSecret'
 

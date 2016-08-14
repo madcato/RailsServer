@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160807164450) do
+ActiveRecord::Schema.define(version: 20160814143409) do
 
   create_table "shared_secrets", force: true do |t|
     t.integer  "id1"
@@ -50,6 +50,9 @@ ActiveRecord::Schema.define(version: 20160807164450) do
     t.datetime "created_at",                                     null: false
     t.datetime "updated_at",                                     null: false
     t.string   "authentication_token",   limit: 30
+    t.integer  "userType",                          default: 0
+    t.string   "name"
+    t.text     "photo"
   end
 
   add_index "users", ["authentication_token"], name: "index_users_on_authentication_token", unique: true

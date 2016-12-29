@@ -2,3 +2,8 @@
 # MobilePayServer
 
 Server for MobilePay project
+
+
+## New users
+
+Create new user with [http://localhost:3000/users/sign_up](http://localhost:3000/users/sign_up)

@@ -10,7 +10,7 @@ class TestsControllerTest < ActionController::TestCase
   end
 
   test "should get index authenticated" do
-    get :index,  { user_email: @user.email, user_token: @user.authentication_token }
+    get :index,  params: { user_email: @user.email, user_token: @user.authentication_token }
     assert_response :success
     assert_not_nil assigns(:tests)
   end
@@ -28,30 +28,30 @@ class TestsControllerTest < ActionController::TestCase
 
   test "should create test" do
     assert_difference('Test.count') do
-      post :create, test: { name: @test.name }
+      post :create, params: {test: { name: @test.name }}
     end
 
     assert_redirected_to test_path(assigns(:test))
   end
 
   test "should show test" do
-    get :show, id: @test
+    get :show, params: { id: @test }
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @test
+    get :edit, params: { id: @test }
     assert_response :success
   end
 
   test "should update test" do
-    patch :update, id: @test, test: { name: @test.name }
+    patch :update, params: { id: @test, test: { name: @test.name } }
     assert_redirected_to test_path(assigns(:test))
   end
 
   test "should destroy test" do
     assert_difference('Test.count', -1) do
-      delete :destroy, id: @test
+      delete :destroy, params: { id: @test }
     end
 
     assert_redirected_to tests_path

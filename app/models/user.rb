@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
     return self.userType == User::MERCHANT
   end
   
-  def valid?
+  def is_valid?
     return !(self.name.nil? || self.photo.nil?)
   end
 end

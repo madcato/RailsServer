@@ -5,7 +5,7 @@ class ResourceController < ApplicationController
   
   def userData
     @user = User.find_by_id(params[:id])
-    if @user && @user.client? && @user.valid?
+    if @user && @user.client? && @user.is_valid?
       respond({u: {n: @user.name, p: @user.photo}})
     else 
       respond({r: :i})
@@ -14,7 +14,7 @@ class ResourceController < ApplicationController
 
   def merchantData
     @user = User.find_by_id(params[:id])
-    if @user && @user.merchant? && @user.valid?
+    if @user && @user.merchant? && @user.is_valid?
       respond({u: {n: @user.name, p: @user.photo}})
     else 
       respond({r: :i})

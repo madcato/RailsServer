@@ -2,6 +2,23 @@
 
 Generic boilerplate server made in RubyOnRails to start new projects.
 
+## Install
+
+1. Install rvm
+
+2. Install Ruby with rvm
+
+		$ rvm install ruby-2.3.8
+
+3. Install Rails 5.2
+
+4. Git clone this project
+
+5. Enter in project dir an update gems with:
+
+		$ bundle update
+
+
 ## This project contains
 
 - Devise (for user authentication and registering)

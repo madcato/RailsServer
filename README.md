@@ -14,7 +14,11 @@ Generic boilerplate server made in RubyOnRails to start new projects.
 
 4. Git clone this project
 
-5. Enter in project dir an update gems with:
+5. Isntall bundle
+
+		$ gem install bundle
+
+6. Enter in project dir an update gems with:
 
 		$ bundle update
 

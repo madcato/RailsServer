@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   # UserType value
   CLIENT = 0
   MERCHANT = 1
+  ADMIN = 2
   
   def client?
     return self.userType == User::CLIENT
@@ -17,6 +18,10 @@ class User < ActiveRecord::Base
   
   def merchant?
     return self.userType == User::MERCHANT
+  end
+  
+  def admin?
+    return self.userType == User::ADMIN
   end
   
   def is_valid?

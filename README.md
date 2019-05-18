@@ -22,12 +22,22 @@ Generic boilerplate server made in RubyOnRails to start new projects.
 
 		$ bundle update
 
+7. Migrate db
+	
+		$ rake db:migrate
+
+8. Seed database
+
+		$ rake db:seed
+
+    This will create and admin user (dani\_vela@me.com , password: 123456)
 
 ## This project contains
 
-- Devise (for user authentication and registering)
-- simple\_token\_authentication (for token authentication)
-
+- [Devise (for user authentication and registering)](https://github.com/plataformatec/devise)
+- [simple\_token\_authentication (for token authentication)](https://github.com/gonzalo-bulnes/simple_token_authentication)
+- [rails\_admin (db administration)](https://github.com/sferik/rails_admin)
+- [cancancan (authorization management)](https://github.com/CanCanCommunity/cancancan)
 
 ## New users
 

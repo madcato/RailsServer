@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :airlines
+  resources :flights
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'resource/userData'
 
   get 'resource/merchantData'

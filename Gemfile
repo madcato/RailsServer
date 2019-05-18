@@ -70,3 +70,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise', '~> 4.6'
 gem 'simple_token_authentication'
+gem 'rails_admin', '~> 1.3'
+gem 'cancancan'

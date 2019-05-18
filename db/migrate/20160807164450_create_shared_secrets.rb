@@ -1,4 +1,4 @@
-class CreateSharedSecrets < ActiveRecord::Migration
+class CreateSharedSecrets < ActiveRecord::Migration[5.0]
   def change
     create_table :shared_secrets do |t|
       t.integer :id1

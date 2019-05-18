@@ -39,6 +39,12 @@ Generic boilerplate server made in RubyOnRails to start new projects.
 - [rails\_admin (db administration)](https://github.com/sferik/rails_admin)
 - [cancancan (authorization management)](https://github.com/CanCanCommunity/cancancan)
 
+## ActiveStoreage (Rails 5.0) for file upload
+
+Use the model **Airline** as a sample for uploading files
+
+- [ActiveStorage documentation](https://edgeguides.rubyonrails.org/active_storage_overview.html)
+
 ## New users
 
 Create new user with [http://localhost:3000/users/sign_up](http://localhost:3000/users/sign_up)

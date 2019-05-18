@@ -34,9 +34,10 @@ Generic boilerplate server made in RubyOnRails to start new projects.
 
 ## This project contains
 
-- Devise (for user authentication and registering)
-- simple\_token\_authentication (for token authentication)
-- rails\_admin (db administration)
+- [Devise (for user authentication and registering)](https://github.com/plataformatec/devise)
+- [simple\_token\_authentication (for token authentication)](https://github.com/gonzalo-bulnes/simple_token_authentication)
+- [rails\_admin (db administration)](https://github.com/sferik/rails_admin)
+- [cancancan (authorization management)](https://github.com/CanCanCommunity/cancancan)
 
 ## New users
 

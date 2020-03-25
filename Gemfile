@@ -42,9 +42,16 @@ gem 'jquery-rails'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# Swagger
+gem 'rswag-api', '>= 2.2.0'
+gem 'rswag-ui', '>= 2.2.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Swagger dev
+  gem 'rspec-rails'
+  gem 'rswag-specs'
 end
 
 group :development do

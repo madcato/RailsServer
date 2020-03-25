@@ -8,7 +8,7 @@ Generic boilerplate server made in RubyOnRails to start new projects.
 
 2. Install Ruby with rvm
 
-		$ rvm install ruby-2.3.8
+		$ rvm install ruby-2.6.3
 
 3. Install Rails 5.2
 
@@ -38,6 +38,7 @@ Generic boilerplate server made in RubyOnRails to start new projects.
 - [simple\_token\_authentication (for token authentication)](https://github.com/gonzalo-bulnes/simple_token_authentication)
 - [rails\_admin (db administration)](https://github.com/sferik/rails_admin)
 - [cancancan (authorization management)](https://github.com/CanCanCommunity/cancancan)
+- [Swagger api, ui and specs](https://github.com/rswag/rswag)
 
 ## ActiveStoreage (Rails 5.0) for file upload
 

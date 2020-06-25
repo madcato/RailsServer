@@ -141,7 +141,7 @@ GEM
     orm_adapter (0.5.0)
     public_suffix (4.0.5)
     puma (3.12.6)
-    rack (2.0.9)
+    rack (2.1.4)
     rack-pjax (1.1.0)
       nokogiri (~> 1.5)
       rack (>= 1.1)
@@ -295,7 +295,7 @@ DEPENDENCIES
   listen (>= 3.0.5, < 3.2)
   loofah (~> 2.2, >= 2.2.3)
   puma (~> 3.12)
-  rack (~> 2.0.6)
+  rack (~> 2.1.4)
   rails (~> 5.2)
   rails-controller-testing
   rails_admin (~> 1.3)

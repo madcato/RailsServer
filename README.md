@@ -8,7 +8,7 @@ Generic boilerplate server made in RubyOnRails to start new projects.
 
 2. Install Ruby with rvm
 
-		$ rvm install ruby-2.6.3
+		$ rvm install ruby-2.6.6
 
 3. Install Rails 5.2
 
@@ -38,7 +38,7 @@ Generic boilerplate server made in RubyOnRails to start new projects.
 
 10. Open a browser and open `http://localhost:3000/admin` url.
 
-11. To see swagger doc open `http://localhost:3000/api-docs/index.html`
+11. To see swagger doc open `http://localhost:3000/api-docs/index.html` url
 
 ## This project contains
 
@@ -60,7 +60,7 @@ Create new user with [http://localhost:3000/users/sign_up](http://localhost:3000
 
 ## Instructions to change the name of the project
 
-Change all ocurrences of "RailsServer" string to your project name
+Change all occurrences of "RailsServer" string to your project name
 
 This string appears in this files:
 - app/views/layouts/application.html.erb

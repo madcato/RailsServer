@@ -32,6 +32,14 @@ Generic boilerplate server made in RubyOnRails to start new projects.
 
     This will create and admin user (dani\_vela@me.com , password: 123456)
 
+9. Run the server
+
+        $ bundle exec rails server
+
+10. Open a browser and open `http://localhost:3000/admin` url.
+
+11. To see swagger doc open `http://localhost:3000/api-docs/index.html`
+
 ## This project contains
 
 - [Devise (for user authentication and registering)](https://github.com/plataformatec/devise)
@@ -58,9 +66,6 @@ This string appears in this files:
 - app/views/layouts/application.html.erb
 - config/appication.rb
 - config/initializers/session\_store.rb
-
-
-
 
 ## Gems
 - https://github.com/hothero/awesome-rails-gem

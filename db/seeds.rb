@@ -11,6 +11,6 @@ user1.name = "admin"
 user1.email = "dani_vela@me.com"
 user1.password = "123456"
 user1.password_confirmation = "123456"
-user1.userType = User::ADMIN
+user1.userType = "admin"
 user1.skip_confirmation!
 user1.save!

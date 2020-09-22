@@ -1,5 +1,5 @@
 RailsAdmin.config do |config|
-
+    config.main_app_name = ["C-3PO", "Admin module"]
   ### Popular gems integration
 
   ## == Devise ==

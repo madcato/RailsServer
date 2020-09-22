@@ -1,48 +1,55 @@
 require 'test_helper'
 
-class AirlinesControllerTest < ActionDispatch::IntegrationTest
+class AirlinesControllerTest < ActionController::TestCase
+  include Devise::Test::ControllerHelpers
+  def auth
+    @request.headers['X-User-Email'] = @user.email
+    @request.headers['X-User-Token'] = @user.authentication_token
+  end
+
   setup do
     @airline = airlines(:one)
+    @user = users(:one)
+    auth
   end
 
   test "should get index" do
-    get airlines_url
+    get :index
     assert_response :success
   end
 
   test "should get new" do
-    get new_airline_url
+    get :new
     assert_response :success
   end
 
   test "should create airline" do
     assert_difference('Airline.count') do
-      post airlines_url, params: { airline: { name: @airline.name } }
+      post :create, params: { airline: { name: @airline.name } }
     end
 
     assert_redirected_to airline_url(Airline.last)
   end
 
   test "should show airline" do
-    get airline_url(@airline)
+    get :show, params: { id: @airline } 
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_airline_url(@airline)
+    get :edit, params: { id: @airline }
     assert_response :success
   end
 
   test "should update airline" do
-    patch airline_url(@airline), params: { airline: { name: @airline.name } }
+    patch :update, params: { id: @airline, airline: { name: @airline.name } }
     assert_redirected_to airline_url(@airline)
   end
 
   test "should destroy airline" do
     assert_difference('Airline.count', -1) do
-      delete airline_url(@airline)
+      delete :destroy, params: { id: @airline }
     end
-
     assert_redirected_to airlines_url
   end
 end

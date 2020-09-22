@@ -25,6 +25,7 @@ class FlightsController < ApplicationController
   # POST /flights.json
   def create
     @flight = Flight.new(flight_params)
+    @flight.airline = Airline.find(params.require(:airline))
 
     respond_to do |format|
       if @flight.save

@@ -1,48 +1,55 @@
 require 'test_helper'
 
-class FlightsControllerTest < ActionDispatch::IntegrationTest
+class FlightsControllerTest < ActionController::TestCase
+  include Devise::Test::ControllerHelpers
+  def auth
+    @request.headers['X-User-Email'] = @user.email
+    @request.headers['X-User-Token'] = @user.authentication_token
+  end
+
   setup do
     @flight = flights(:one)
+    @airline = airlines(:one)
+    @user = users(:one)
+    auth
   end
 
   test "should get index" do
-    get flights_url
+    get :index
     assert_response :success
   end
 
   test "should get new" do
-    get new_flight_url
+    get :new
     assert_response :success
   end
 
   test "should create flight" do
     assert_difference('Flight.count') do
-      post flights_url, params: { flight: { code: @flight.code, destination: @flight.destination, origin: @flight.origin } }
+      post :create, params: { flight: { code: @flight.code, destination: @flight.destination, origin: @flight.origin}, airline: @airline }
     end
-
     assert_redirected_to flight_url(Flight.last)
   end
 
   test "should show flight" do
-    get flight_url(@flight)
+    get :show, params: { id: @flight }
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_flight_url(@flight)
+    get :edit, params: { id: @flight }
     assert_response :success
   end
 
   test "should update flight" do
-    patch flight_url(@flight), params: { flight: { code: @flight.code, destination: @flight.destination, origin: @flight.origin } }
-    assert_redirected_to flight_url(@flight)
+    patch :update, params: { id: @flight, flight: { code: @flight.code, destination: @flight.destination, origin: @flight.origin } }
+    assert_response :success
   end
 
   test "should destroy flight" do
     assert_difference('Flight.count', -1) do
-      delete flight_url(@flight)
+      delete :destroy, params: { id: @flight }
     end
-
     assert_redirected_to flights_url
   end
 end

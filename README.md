@@ -4,13 +4,13 @@ Generic boilerplate server made in RubyOnRails to start new projects.
 
 ## Install
 
-1. Install rvm
+1. Install rvm from: [Installing RVM](https://rvm.io/rvm/install)
 
 2. Install Ruby with rvm
 
-		$ rvm install ruby-2.6.6
+		$ rvm install "ruby-2.7.1"
 
-3. Install Rails 5.2
+3. Install Rails 5.2.4.4
 
 4. Git clone this project
 

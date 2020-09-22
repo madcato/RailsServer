@@ -1,7 +1,7 @@
 test:
   stage: test
   script:
-    - bundle install --path /cache
+    - bundle install
     - bundle exec rake db:create RAILS_ENV=test
     - bundle exec rake test
 

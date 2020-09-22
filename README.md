@@ -22,23 +22,36 @@ Generic boilerplate server made in RubyOnRails to start new projects.
 
 		$ bundle update
 
-7. Migrate db
+7. Install libv8
+	On macOS:
+
+		brew install v8
+	On Linux
+	
+		sudo apt-get install libv8-dev
+8. Migrate db
 	
 		$ rake db:migrate
 
-8. Seed database
+9. Seed database
 
 		$ rake db:seed
 
     This will create and admin user (dani\_vela@me.com , password: 123456)
 
-9. Run the server
+10. Run the server
 
         $ bundle exec rails server
 
-10. Open a browser and open `http://localhost:3000/admin` url.
+11. Open a browser and open `http://localhost:3000/admin` url.
 
-11. To see swagger doc open `http://localhost:3000/api-docs/index.html` url
+12. To see swagger doc open `http://localhost:3000/api-docs/index.html` url
+
+## Testing
+
+Launch tests with command:
+
+	$ rails t
 
 ## This project contains
 

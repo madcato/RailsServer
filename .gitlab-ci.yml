@@ -4,7 +4,7 @@ test:
     - bundle install
     - bundle exec rake db:create RAILS_ENV=test
     - bundle exec rake test
-
+ 
 # staging:
 #   stage: deploy
 #   script:

@@ -8,7 +8,7 @@ Generic boilerplate server made in RubyOnRails to start new projects.
 
 2. Install Ruby with rvm
 
-		$ rvm install "ruby-2.7.1"
+		$ rvm install "ruby-2.6.6"
 
 3. Install Rails 5.2.4.4
 
